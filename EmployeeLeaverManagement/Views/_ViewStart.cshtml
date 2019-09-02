@@ -1,0 +1,12 @@
+﻿@{
+    string layout = "";
+    if (Request.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        layout = "~/Views/Shared/_Layout.cshtml";    
+    }
+    else
+    {
+        layout = "~/Views/Shared/_EmployeeLayout.cshtml";        
+    }
+    Layout = layout;
+}

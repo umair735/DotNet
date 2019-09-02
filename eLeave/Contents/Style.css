@@ -1,0 +1,366 @@
+﻿* {
+margin:0px;
+padding:0px;
+}
+.Header {
+    background-image: url("../Images/header.JPG");
+    background-repeat: repeat-x;
+    background-size: auto 152px;
+    height: 88px;
+    width: auto;
+}
+.Footer {
+background-image:url("../Images/footer.JPG");
+background-repeat:repeat-x;
+background-size:auto 80px;
+height:80px;
+width:auto;
+
+}
+.logo {
+    
+     margin:auto;
+     margin-top:20px;
+    width:800px;
+    height:62px;
+      /*border:1px solid grey;*/
+    
+}
+.logoimage {
+   
+   float:left;
+    background-image:url("../Images/logo.JPG");
+   
+    width:48px;
+    height:60px;
+    /*border:1px solid grey;*/
+   
+}
+
+.logotxt {
+    
+    float:right;
+     width:745px;
+    height:60px;
+     /*border:1px solid grey;*/
+     
+     
+
+}
+h2 {
+    padding-top:18px;
+    color:rgba(0, 109, 168, 1);
+}
+h3 {
+    width: 97%;
+    font: 22px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 11px 0px 18px 31px;
+    display: block;
+    margin: 0px -15px 14px -1px;
+    color: #FFF;
+    background: rgb(7, 80, 103);
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 1px solid #FBFBFB;
+}
+
+.Content {
+   
+background-image:url("../Images/body.JPG");
+background-size:100% 100px;
+background-repeat:no-repeat;
+height:777px;
+}
+.ContentItem {
+     
+       margin:auto;
+       top:2px;
+       left:200px;
+       width:960px;
+       height:777px;
+      
+}
+.ContentPicture {
+      background-image:url("../Images/login.png");
+    width:450px;
+    height:300px;
+   
+     background-size:450px 300px;
+    
+     
+     float:left;
+     opacity:.7;
+   
+   
+}
+.Form {
+    float:left;
+    width:92%;
+
+   margin-left:20px;
+       
+     
+}
+.AdminForm {
+  
+    margin:auto;
+   padding-top:100px;
+    width:600px;
+    height:300px;
+}
+.nav {
+    background: #0081A8 none repeat scroll 0% 0%;
+    position: relative;
+    float: right;
+    width: 100%;
+    Height: 70px;
+    border-bottom: 1px solid #E4E1E1;
+    top: 19px;
+    /* border-top-left-radius: 8px; */
+} 
+
+.nav ol {
+    float:left;
+    list-style:none;
+     display:block;
+}
+.nav ol li {
+    float:left;
+    padding:25px;
+    margin:auto;
+   
+    
+}
+.nav ol li:hover{
+    
+   background-color:brown;
+    
+}
+
+
+
+
+.left {
+    background: #0081A8 none repeat scroll 0% 0%;
+    position: relative;
+    float: right;
+    width: 100%;
+    
+    
+ 
+} 
+
+.left ol {
+     
+    list-style:none;
+     display:block;
+}
+.left ol li {
+    padding:5px;
+    margin:auto;
+   
+    
+}
+.left ol li :hover{
+  font:  12px Arial, Helvetica, sans-serif;
+   background-color:brown;
+    
+}
+
+
+
+
+
+
+
+
+/*____________Form css__________*/
+
+
+span{
+   
+    
+    font: 12px Arial, Helvetica, sans-serif;
+    color: #666;
+   
+}
+span a{
+   font: 12px Arial, Helvetica, sans-serif;
+    color: rgba(0, 109, 168, 1);
+   text-decoration:none;
+   
+}
+span a:hover{
+   font: 12px Arial, Helvetica, sans-serif;
+    color: rgba(9, 140, 205, 1);
+   text-decoration:underline;
+   
+}
+li span a {
+    font: 12px Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration:none;
+}
+li a:hover{
+   font: 12px Arial, Helvetica, sans-serif;
+    color: rgba(229, 229, 229, 1);
+   text-decoration:underline;
+   
+}
+.TxtRequired {
+    position:absolute;
+    float:left;
+    font: 12px Arial, Helvetica, sans-serif;
+    color: red;
+    text-decoration:none;
+}
+.textBox {
+    color: #555;
+    line-height: 15px;
+    padding: 0px 0px 0px 10px;
+    margin-top: 6px;
+    border: 1px solid #E5E5E5;
+    background: #FBFBFB;
+    box-shadow: inset 1px 1px 2px rgba(238, 238, 238, 0.2);
+    line-height: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button {
+    background-color: rgba(0, 109, 168, 1)/*//#9DC45F*/;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #949494;
+    margin-top:8px;
+    float:right;
+    margin-right:-11px !important;
+}
+button:hover {
+    background-color:#80A24A;
+}
+
+.textarea{
+    height:100px;
+    padding-top: 10px;
+}
+.select {
+      border: 1px solid #E5E5E5;
+          background: #FBFBFB;
+
+       color: #555;
+
+    width:102%;
+    height:30px;
+}
+  h1 {
+    width: 97%;
+    font: 24px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 11px 0px 18px 31px;
+    display: block;
+    margin: 15px -15px 14px -1px;
+    color: #FFF;
+    background: rgb(40, 52, 58);
+    text-shadow: 1px 1px 1px #949494;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: 1px solid #FBFBFB;
+}
+
+/*Calander*/
+.Calander {
+
+    width: 515px;
+     border-left:1px solid grey;
+}
+    .Calander th {
+        font-size:14px;
+        border-right:1px solid grey;
+            border-bottom:1px solid grey;
+             border-top:1px solid grey;
+    }
+     .Calander td {
+          border-right:1px solid grey;
+            border-bottom:1px solid grey;
+          text-align:center;
+         
+          
+         
+          
+    }
+     .Calander td:hover {
+         
+          text-align:center;
+         
+          background:rgba(0, 109, 168, 1);
+         color:white !important;
+          
+    }
+     td a {
+     font: 15px Arial, Helvetica, sans-serif;
+    color: rgba(0, 109, 168, 1);
+    font-weight:bold;
+   text-decoration:none;
+  padding:10px;
+   display:block;
+}
+td a:hover{
+    font-weight:bold;
+     font: 15px Arial, Helvetica, sans-serif;
+    color: white;
+   text-decoration:none;
+   padding:10px;
+   display:block;
+}
+
+
+/*################# Admin css*/
+
+.tbl_Application {
+    margin:auto;
+    width:75%;
+    background-color:#FFFFFF;
+    position:relative;
+    top:50px;
+     box-shadow: 0px 2px 5px #888888;
+}
+
+.h2 {
+    padding:20px;
+    display:block;
+   text-align:center;
+    background-image:url("../Images/green.jpg");
+    background-size:auto 74px;
+    border-radius:10px;
+    
+    color:white;
+}
+/*Grid layout*/
+       
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+    width: 946px;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+    text-align:center;
+}

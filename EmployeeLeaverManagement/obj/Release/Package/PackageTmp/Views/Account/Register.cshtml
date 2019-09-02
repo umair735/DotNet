@@ -1,0 +1,69 @@
+﻿@model EmployeeLeaverManagement.Models.RegisterViewModel
+@{
+    Layout = null;
+    var db = new EmployeeLeaverManagement.Models.ApplicationDbContext();
+    var Providers = db.Departments.Select(x => new { x.DepartmentID, x.DepartmentName }).ToList();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="umair">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <title>Registration</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/AllContent/css")
+    </head>
+<body class="login-body">
+    <div class="container">
+        <div class="form-signin">
+            <h2 class="form-signin-heading">Register Now</h2>
+            <h2 class="form-signin-heading"> @Html.ValidationSummary()</h2>
+            <div class="login-wrap">
+                <p>Enter your personal details below</p>
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationMessageFor(model => model.DepartmentID)
+                    @Html.DropDownList("DepartmentID", new SelectList(Providers, "DepartmentID", "DepartmentName"), "Select Department", new { @class = "form-control" })
+
+                    <br />
+                    @Html.ValidationMessageFor(model => model.Name)
+                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder = "Enter Name" })
+
+                    <br />
+                    @Html.ValidationMessageFor(model => model.Email)
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Enter Email" })
+
+                    <br />
+                    @Html.ValidationMessageFor(model => model.Password)
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "Enter Password" })
+
+                    <br />
+                    @Html.ValidationMessageFor(model => model.ConfirmPassword)
+                    @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirm Password" })
+
+
+                    <br />
+                    @Html.ValidationMessageFor(model => model.Address)
+                    @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @placeholder = "Enter Address" })
+
+
+                    <input type="submit" value="Submit" class="btn btn-lg btn-login btn-block" />
+                }
+
+                <div class="registration">
+                    Already Registered. @Html.ActionLink("Login", "Login", "Account")
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/AllScript")
+   
+</body>
+</html>

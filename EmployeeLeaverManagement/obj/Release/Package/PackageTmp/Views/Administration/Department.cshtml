@@ -1,0 +1,48 @@
+﻿@model EmployeeLeaverManagement.Models.Departments
+
+@{
+    ViewBag.Title = "Departments";
+}
+@section depatmentname{
+    @*<meta http-equiv="refresh" content="0; url=http://localhost:53048/Administration/Department" />*@
+    
+    }
+
+@using (Ajax.BeginForm(new AjaxOptions { OnComplete = "myfunction();", UpdateTargetId = "load", InsertionMode = InsertionMode.Replace }))
+{
+    @Html.AntiForgeryToken()
+    <div class="panel">
+        <div class="panel-body">
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DepartmentName, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.DepartmentName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.DepartmentName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="button-next  btn btn-info" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div id="load">
+    @{
+        Html.RenderAction("Index");
+    }
+</div>
+@section Scripts {
+    <script>
+        function myfunction() {
+            $('#DepartmentName').val("");
+            alert('Department Name Saved successfully.');
+            //history.pushState("object or string representing the state of the page", "new title", "\b");
+           
+        }
+    </script>
+}

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<EmployeeLeaverManagement.Models.LeaveType>
+
+@{
+    ViewBag.Title = "AddTypeList";
+    Layout = null;
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaveTypeName)
+        </th>
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeaveTypeName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditType", new { id = item.LeaveTypeID }) |
+            
+            @Html.ActionLink("Delete", "DeleteLeave", new { id = item.LeaveTypeID }, new { onclick = "return confirm('Are you sure you wish to delete this Leave Type?');" })
+        </td>
+    </tr>
+}
+
+</table>
